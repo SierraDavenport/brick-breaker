@@ -10,7 +10,7 @@ class Handle_Off_Screen_Action(Action):
     
     def execute(self, cast):
         ball = cast["balls"][0]
-        # paddle = cast["paddle"][0]
+        paddle = cast["paddle"][0]
         
         if ball.get_position().get_x() <= 1:
                 audio_service.play_sound(constants.SOUND_BOUNCE)
@@ -24,6 +24,7 @@ class Handle_Off_Screen_Action(Action):
         if ball.get_position().get_y() >= 576:
                 audio_service.play_sound(constants.SOUND_BOUNCE)
                 ball.set_position(Point(380, 500))
+                paddle.set_position(Point(345, 530))
 
 
 
