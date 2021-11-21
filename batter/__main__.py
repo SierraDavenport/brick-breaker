@@ -67,6 +67,7 @@ def main():
     paddle.set_position(Point(345, 530))
     paddles.append(paddle)
     cast["paddle"] = paddles
+    
 
 
     # Create the script {key: tag, value: list}
